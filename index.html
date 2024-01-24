@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #87CEEB; /* Sky Blue background */
+        }
+
+        .flower-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            animation: spinFlower 4s linear infinite;
+        }
+
+        .petal {
+            width: 5px;
+            height: 50px;
+            background-color: #FFD700; /* Yellow for petal color */
+            position: absolute;
+            transform: translate(-50%, -50%);
+            animation: bloomPetal 0.25s ease-in-out forwards infinite alternate;
+        }
+
+        @keyframes spinFlower {
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        @keyframes bloomPetal {
+            to {
+                height: 80px;
+            }
+        }
+    </style>
+    <title>Spinning Flower</title>
+</head>
+<body>
+    <div class="flower-container">
+        <div class="petal" style="transform: rotate(60deg);"></div>
+        <div class="petal" style="transform: rotate(120deg);"></div>
+        <div class="petal" style="transform: rotate(180deg);"></div>
+        <div class="petal" style="transform: rotate(240deg);"></div>
+        <div class="petal" style="transform: rotate(300deg);"></div>
+        <div class="petal" style="transform: rotate(360deg);"></div>
+    </div>
